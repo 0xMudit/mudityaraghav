@@ -9,12 +9,12 @@ export default function Projects() {
       </p>
       <div className="space-y-5">
         {projects.map((p) => (
-          <article key={p.title} className="flex gap-5 rounded-2xl border border-[#e8e8ed] bg-white p-4 transition hover:shadow-md dark:border-[#3a3a3e] dark:bg-[#2c2c2e]">
-            <div className="hidden w-44 shrink-0 sm:block">
+          <article key={p.title} className="flex flex-col gap-4 rounded-2xl border border-[#e8e8ed] bg-white p-4 transition hover:shadow-md dark:border-[#3a3a3e] dark:bg-[#2c2c2e] sm:flex-row sm:gap-5">
+            <div className="w-full shrink-0 sm:w-44">
               <img
                 src={p.image}
                 alt={`${p.title} preview`}
-                className="h-32 w-full rounded-xl border border-[#e8e8ed] object-cover object-top dark:border-[#48484a]"
+                className="aspect-video w-full rounded-xl border border-[#e8e8ed] object-cover object-top dark:border-[#48484a] sm:aspect-auto sm:h-32"
               />
             </div>
             <div className="min-w-0 flex-1">

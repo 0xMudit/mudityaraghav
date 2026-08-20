@@ -1,11 +1,11 @@
 export default function Profile() {
   return (
-    <section className="mb-10 flex items-start gap-8">
-      <div className="hidden shrink-0 md:block">
+    <section className="mb-10 flex flex-col items-center gap-6 md:flex-row md:items-start md:gap-8">
+      <div className="shrink-0">
         <img
           src="/assets/profile.jpeg"
           alt="Muditya Raghav"
-          className="w-36 rounded-2xl"
+          className="w-28 rounded-2xl md:w-36"
         />
       </div>
       <div className="min-w-0 flex-1">

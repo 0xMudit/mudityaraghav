@@ -24,7 +24,7 @@ export default function Navbar() {
         <a href="#" className="text-base font-semibold text-[#1d1d1f] no-underline dark:text-white">
           Muditya Raghav
         </a>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-3 sm:gap-5">
           <a href="#experience" className="hidden text-sm text-[#6e6e73] no-underline hover:text-[#1d1d1f] dark:text-[#a1a1a6] dark:hover:text-white sm:inline">
             Experience
           </a>
@@ -37,11 +37,11 @@ export default function Navbar() {
           <a
             href={resumeUrl}
             download
-            className="inline-flex items-center rounded-full bg-[#0071e3] px-4 py-1.5 text-sm font-medium text-white no-underline transition hover:bg-[#0077ed]"
+            className="inline-flex items-center rounded-full bg-[#0071e3] px-3 py-1.5 text-sm font-medium text-white no-underline transition hover:bg-[#0077ed] sm:px-4"
           >
             Resume
           </a>
-          <div className="flex items-center gap-3 border-l border-[#e8e8ed] pl-4 dark:border-[#3a3a3e]">
+          <div className="flex items-center gap-3 border-l border-[#e8e8ed] pl-3 dark:border-[#3a3a3e] sm:pl-4">
             <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-[#86868b] hover:text-[#1d1d1f] dark:text-[#a1a1a6] dark:hover:text-white" aria-label="GitHub">
               <GithubIcon />
             </a>

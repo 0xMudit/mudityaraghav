@@ -46,8 +46,8 @@ export const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "Supabase", "SQLite", "Stripe", "LLM Streaming", "RAG"],
     metrics: ["Stripe-billed SaaS", "Streamed LLM responses", "Saved chats + sources"],
     image: "/assets/malcom.png",
-    live: "https://malcomman.duckdns.org/malcom/new",
-    repo: "https://github.com/0xMudit/malcom-ai",
+    live: "https://malcom-lake.vercel.app",
+    repo: "https://github.com/0xMudit/malcom-ai-research-assistant",
   },
   {
     title: "Jini",
@@ -56,8 +56,8 @@ export const projects: Project[] = [
     tech: ["React", "Express", "TypeScript", "SQLite", "Groq", "Embeddings", "Docker"],
     metrics: ["Multi-format extraction", "Cited answers", "30+ unit tests"],
     image: "/assets/jini.png",
-    live: "https://malcomman.duckdns.org/jini/",
-    repo: "https://github.com/0xMudit/Jini",
+    live: "https://jini-document-intelligence.vercel.app",
+    repo: "https://github.com/0xMudit/jini-document-intelligence",
   },
   {
     title: "Kingswork",
@@ -66,8 +66,8 @@ export const projects: Project[] = [
     tech: ["FastAPI", "React", "TypeScript", "SQLAlchemy", "WebSockets", "Groq"],
     metrics: ["Real-time updates", "Backtesting + alerts", "AI-assisted research"],
     image: "/assets/kingswork.png",
-    live: "https://malcomman.duckdns.org/kingswork/dashboard/overview",
-    repo: "https://github.com/0xMudit/KingsWork",
+    live: "https://kingswork-ruddy.vercel.app",
+    repo: "https://github.com/0xMudit/Kingswork-Trading-Intelligence-Platform",
   },
 ];
 
