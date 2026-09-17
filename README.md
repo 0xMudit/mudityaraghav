@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# mudityaraghav-portfolio
 
-## Getting Started
+Source for **[mudityaraghav.vercel.app](https://mudityaraghav.vercel.app)** — my personal engineering portfolio.
 
-First, run the development server:
+A statically rendered Next.js App Router site. All copy and content lives in a single
+typed data module, so the site renders from one source of truth with no CMS and no
+runtime data fetching.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 16 (App Router), React 19 |
+| Language | TypeScript (strict) |
+| Styling | Tailwind CSS v4 |
+| Theme | Custom provider with light/dark, no flash on first paint |
+| Hosting | Vercel (static output) |
+
+## Structure
+
+```
+src/
+  app/                    route shell, layout, global styles
+  components/
+    sections/             hero, highlights, experience, projects, skills, research, education, contact
+    ui.tsx                Chip / Section / SectionHeading primitives
+    reveal.tsx            IntersectionObserver scroll-in animation
+    theme-provider.tsx    light + dark theme state
+  data/portfolio.ts       ← ALL content lives here (typed)
+public/assets/            project screenshots, résumé PDF, profile photo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Editing content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`src/data/portfolio.ts` is the single source of truth. Every section reads from an
+exported, typed array:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Export | Drives |
+|---|---|
+| `highlights` | "Now" timeline |
+| `projects` | Project cards — **first entry renders as the featured card**, the rest fill a 2-column grid |
+| `experience` | Work history |
+| `skills` | Skill groups |
+| `research` | Publications |
+| `socials`, `email`, `resumeUrl` | Contact + résumé links |
 
-## Learn More
+To add a project, append an object to `projects` and drop its screenshot in
+`public/assets/`. The grid adapts; the order in the array is the order on the page.
 
-To learn more about Next.js, take a look at the following resources:
+## Running locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+npm run dev      # http://localhost:3000
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build    # production build + type checking
+npm run lint     # eslint
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pushes to `main` deploy automatically via Vercel. The `public/assets/*.pdf` résumé is
+served directly, so updating it is just a file replacement — no code change required.
