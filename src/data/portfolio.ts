@@ -1,5 +1,5 @@
 export const highlights = [
-  { date: "Now", event: "Open to senior software engineering roles — backend, full-stack, and infrastructure" },
+  { date: "Now", event: "Open to software engineering roles — backend, full-stack, and infrastructure" },
   { date: "2025", event: "Shipped Clara Network — a Mastercard/Visa-style payment switch in Go with ISO 8583 authorization, double-entry ledger, and ISO 20022 settlement" },
   { date: "Mar 2025", event: "Reliance Jio — automated 80+ LLM-driven test cases (+40% coverage) and improved API stability by 25%" },
   { date: "Mar 2023", event: "Published REST-to-gRPC payment systems research (ResearchGate)" },

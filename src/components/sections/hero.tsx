@@ -33,7 +33,7 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
               </span>
-              Open to senior software engineering roles
+              Open to software engineering roles
             </span>
           </Reveal>
 

@@ -30,7 +30,7 @@ export default function Contact() {
               Let&rsquo;s build something.
             </h3>
             <p className="mt-2.5 max-w-xl text-[15px] text-zinc-600 dark:text-zinc-400">
-              Open to senior software engineering roles across backend, full-stack, and
+              Open to software engineering roles across backend, full-stack, and
               infrastructure. The fastest way to reach me is email.
             </p>
 
