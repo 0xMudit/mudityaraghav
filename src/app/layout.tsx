@@ -15,9 +15,9 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
-const siteTitle = "Muditya Raghav — Machine Learning Engineer";
+const siteTitle = "Muditya Raghav — Software Engineer";
 const siteDescription =
-  "I ship ML systems end-to-end — from a ViT re-identification model to a Stripe-billed AI SaaS. Applied CV research, LLM products, and production engineering.";
+  "I design and ship production systems end-to-end — a Mastercard-style payments switch in Go, a Stripe-billed AI research platform, and a real-time trading intelligence backend.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mudityaraghav.vercel.app"),
@@ -25,13 +25,15 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     "Muditya Raghav",
-    "Machine Learning Engineer",
     "Software Engineer",
-    "Applied Scientist",
-    "Computer Vision",
-    "LLM",
-    "RAG",
-    "PyTorch",
+    "Backend Engineer",
+    "Full-Stack Engineer",
+    "Go",
+    "Python",
+    "TypeScript",
+    "Payments",
+    "AWS",
+    "Docker",
   ],
   authors: [{ name: "Muditya Raghav" }],
   openGraph: {

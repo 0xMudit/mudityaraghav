@@ -8,7 +8,7 @@ export default function Experience() {
       <SectionHeading
         index="02"
         title="Experience"
-        description="Production engineering, ML workflows, and QA automation across three teams."
+        description="Four roles across product engineering, platform quality, and security — with the impact I owned at each."
       />
 
       <div className="relative space-y-4">

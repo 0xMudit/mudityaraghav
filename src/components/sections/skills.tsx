@@ -8,7 +8,7 @@ export default function Skills() {
       <SectionHeading
         index="04"
         title="Skills"
-        description="The stack I reach for — from model training through to production MLOps."
+        description="The stack I reach for — from backend services and data modeling to deployment and security testing."
       />
 
       <div className="grid gap-4 sm:grid-cols-2">

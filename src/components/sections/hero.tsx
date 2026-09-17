@@ -4,10 +4,10 @@ import { btnAccent, btnGhost, iconButton } from "@/components/ui";
 import { email, experience, projects, research, resumeUrl, socials } from "@/data/portfolio";
 
 const focus = [
-  "Machine Learning Engineer — applied CV research and full-stack AI products.",
-  "From training and fine-tuning to deployment, monitoring, and scaling.",
-  "LLMs, RAG pipelines, ViT-based re-identification, and the gap between a trained model and a shipped product.",
-  "Adversarial security and data validation background — I think like an attacker and build like an engineer.",
+  "End-to-end ownership: I take ambiguous problems to deployed, monitored, and maintained production systems.",
+  "Backend depth across Go, Python, and TypeScript — REST, WebSockets, financial ISO flows, and relational data.",
+  "Reliability mindset forged in adversarial testing: 25% API stability gain and 3 verified bug-bounty reports.",
+  "Leverage beyond my own work: automation adopted by 2 teams, cutting test time 90% and release cycles 20%.",
 ];
 
 const socialLinks = [
@@ -18,7 +18,7 @@ const socialLinks = [
 
 export default function Hero() {
   const stats = [
-    { value: String(projects.length), label: "Shipped products" },
+    { value: String(projects.length), label: "Systems shipped" },
     { value: String(research.length), label: "Publications" },
     { value: String(experience.length), label: "Engineering roles" },
   ];
@@ -33,7 +33,7 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
               </span>
-              Open to Software Engineer &amp; ML/AI roles
+              Open to senior software engineering roles
             </span>
           </Reveal>
 
@@ -42,14 +42,15 @@ export default function Hero() {
               Muditya Raghav
             </h1>
             <p className="mt-4 font-mono text-[13px] tracking-tight text-accent-600 sm:text-sm dark:text-accent-400">
-              Machine Learning Engineer · Applied CV &amp; LLM systems
+              Software Engineer · Backend Systems &amp; Full-Stack Products
             </p>
           </Reveal>
 
           <Reveal delay={110}>
             <p className="mt-5 max-w-xl text-base text-zinc-600 sm:text-[17px] dark:text-zinc-400">
-              I ship ML systems end-to-end — from a ViT re-identification model to a Stripe-billed AI
-              SaaS. Applied CV research, LLM products, and production engineering.
+              I design and ship production systems end-to-end — a Mastercard-style payments switch in Go, a
+              Stripe-billed AI research platform, and a real-time trading intelligence backend. From
+              architecture and data modeling to deployment and operations.
             </p>
           </Reveal>
 

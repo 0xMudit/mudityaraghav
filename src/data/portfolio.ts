@@ -1,10 +1,10 @@
 export const highlights = [
-  { date: "Now", event: "Actively interviewing — open to ML/AI Engineer, Applied Scientist, and research roles" },
-  { date: "Dec 2023 — Mar 2025", event: "QA Associate Engineer at Reliance Jio — AI-assisted testing, 80+ automated cases, 40% coverage gain" },
+  { date: "Now", event: "Open to senior software engineering roles — backend, full-stack, and infrastructure" },
+  { date: "2025", event: "Shipped Clara Network — a Mastercard/Visa-style payment switch in Go with ISO 8583 authorization, double-entry ledger, and ISO 20022 settlement" },
+  { date: "Mar 2025", event: "Reliance Jio — automated 80+ LLM-driven test cases (+40% coverage) and improved API stability by 25%" },
   { date: "Mar 2023", event: "Published REST-to-gRPC payment systems research (ResearchGate)" },
   { date: "Jul 2022", event: "Published AI-based low-light activity detection research" },
-  { date: "Apr 2022", event: "Software Engineer Intern at Persistent Systems — ML data pipelines" },
-  { date: "May 2023", event: "Graduated B.Tech — CGPA 9.02/10" },
+  { date: "May 2023", event: "Graduated B.Tech with CGPA 9.02/10" },
 ];
 
 export interface Project {
@@ -21,50 +21,30 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Clara Network",
-    tag: "Fintech / Payment Infrastructure",
-    desc: "Open-source Mastercard/Visa-style card payment network built end-to-end in Go — ISO 8583 switch with BIN routing and risk scoring, net settlement with default fund and pacs.009, double-entry ledger, issuing/acquiring stacks, disputes engine, HSM key management, and ISO 20022 instant payments. All 10 blueprint phases complete.",
+    tag: "Payments Infrastructure",
+    desc: "A Mastercard/Visa-style card payment network built end-to-end in Go. I designed the ISO 8583 switch, BIN-based authorization routing with failover and stand-in processing, and an append-only double-entry ledger with reconciliation — then layered the issuing stack (EMV ARQC verification, token vault, wallet provisioning), acquiring stack (merchant boarding, MATCH/OFAC screening), a disputes engine, HSM key management, and 24/7 ISO 20022 instant settlement on top.",
     tech: ["Go", "ISO 8583", "ISO 20022", "PostgreSQL", "Redis", "Docker", "HSM", "EMV"],
-    metrics: ["10 phases complete", "v0.1.0-beta", "27 research docs", "20s instant-payment SLA"],
+    metrics: ["Full switch + ledger", "Issuing + acquiring stacks", "HSM key management", "24/7 instant settlement"],
     image: "/assets/clara.png",
     live: "https://github.com/0xMudit/Clara-Network",
     repo: "https://github.com/0xMudit/Clara-Network",
   },
   {
-    title: "Cattle Re-ID",
-    tag: "Applied Computer Vision",
-    desc: "A ViT-B/16-based cattle re-identification system using PHE embeddings and a custom benchmark I built and debugged from scratch. Weights published to HuggingFace.",
-    tech: ["ViT-B/16", "PHE Embeddings", "PyTorch", "HuggingFace", "CV", "Benchmarking"],
-    metrics: ["Custom benchmark debugged from scratch", "HuggingFace-hosted weights"],
-    image: "/assets/cattle_reid.png",
-    live: "https://huggingface.co/0xMudit",
-    repo: "https://github.com/0xMudit",
-  },
-  {
     title: "Malcom",
-    tag: "AI Research Workspace",
-    desc: "A full-stack AI research platform with streamed LLM responses, document context retrieval, web research with sources, saved chats, markdown/math rendering, and Stripe-backed subscriptions.",
+    tag: "Full-Stack AI Product",
+    desc: "A full-stack AI research platform with streamed LLM responses, document context retrieval, web research with cited sources, and Markdown/math rendering. I owned the product and the platform — saved chats, secure sessions, and Stripe-backed subscriptions on a Next.js/Supabase stack.",
     tech: ["Next.js", "TypeScript", "Supabase", "SQLite", "Stripe", "LLM Streaming", "RAG"],
-    metrics: ["Stripe-billed SaaS", "Streamed LLM responses", "Saved chats + sources"],
+    metrics: ["Stripe-billed SaaS", "Streamed LLM responses", "Cited web research"],
     image: "/assets/malcom.png",
     live: "https://malcom-lake.vercel.app",
     repo: "https://github.com/0xMudit/malcom-ai-research-assistant",
   },
   {
-    title: "Jini",
-    tag: "Document Intelligence",
-    desc: "A local-first workspace that turns PDFs, spreadsheets, and personal documents into searchable answers, cited evidence, extracted dates/amounts, and dashboard insights using NLP and retrieval.",
-    tech: ["React", "Express", "TypeScript", "SQLite", "Groq", "Embeddings", "Docker"],
-    metrics: ["Multi-format extraction", "Cited answers", "30+ unit tests"],
-    image: "/assets/jini.png",
-    live: "https://jini-document-intelligence.vercel.app",
-    repo: "https://github.com/0xMudit/jini-document-intelligence",
-  },
-  {
     title: "Kingswork",
-    tag: "Trading Intelligence Platform",
-    desc: "A full-stack trading intelligence platform: market dashboards, stock analysis, paper portfolios, backtesting, alerts, prediction markets, and AI-assisted research in one authenticated product.",
-    tech: ["FastAPI", "React", "TypeScript", "SQLAlchemy", "WebSockets", "Groq"],
-    metrics: ["Real-time updates", "Backtesting + alerts", "AI-assisted research"],
+    tag: "Real-Time Backend",
+    desc: "A full-stack trading intelligence platform with market dashboards, stock analysis, paper portfolios, backtesting, and AI-assisted research. Built a multi-domain FastAPI backend with JWT auth, WebSockets, and SQLAlchemy models feeding a React client.",
+    tech: ["FastAPI", "React", "WebSockets", "SQLAlchemy", "JWT"],
+    metrics: ["Multi-domain backend", "JWT auth + WebSockets", "Backtesting + alerts"],
     image: "/assets/kingswork.png",
     live: "https://kingswork-ruddy.vercel.app",
     repo: "https://github.com/0xMudit/Kingswork-Trading-Intelligence-Platform",
@@ -80,22 +60,32 @@ export interface Job {
 
 export const experience: Job[] = [
   {
+    period: "Apr 2025 — Present",
+    role: "Software Engineer (Freelance)",
+    company: "Personal Engineering Practice, Jabalpur",
+    bullets: [
+      "Designed, built, and operate three end-to-end production systems — Clara Network (payments), Malcom (AI research), and Kingswork (trading intelligence) — owning architecture, backend, deployment, and operations.",
+      "Architected services in Go, Python, and TypeScript with REST and WebSocket interfaces; containerized with Docker and deployed to AWS EC2 on Linux with CI/CD.",
+      "Made cross-domain engineering calls across financial correctness (ISO 8583/20022), AI/LLM integration, and real-time data — turning ambiguous product ideas into shipped, maintainable systems.",
+    ],
+  },
+  {
     period: "Dec 2023 — Mar 2025",
-    role: "QA Associate Engineer + AI Workflows",
+    role: "QA Associate Engineer",
     company: "Reliance Jio Platforms, Hyderabad",
     bullets: [
-      "Designed and deployed AI-assisted QA workflows using LLMs and Automator AI, automating 80+ test cases and increasing coverage by 40%.",
-      "Built Python-based data validation pipelines processing 800+ tracked defects, resolving 35+ critical API issues.",
-      "Integrated ML-driven test generation with Jenkins CI/CD, contributing to 20% faster release cycles.",
+      "Automated 80+ test cases with LLM-driven Automator AI, expanding coverage by 40% across a large-scale platform.",
+      "Hardened REST API suites, fixing 35+ critical bugs and improving system stability by 25%.",
+      "Integrated CI/CD pipelines with Jenkins, accelerating release cadence by 20%.",
     ],
   },
   {
     period: "Apr 2022 — Jun 2022",
-    role: "Software Engineer Intern — ML & Data",
+    role: "Software Engineer Intern",
     company: "Persistent Systems, Remote",
     bullets: [
-      "Built automated data validation engine with Python and Pandas, processing 10,000+ rows per test run.",
-      "Developed ML-adjacent QA workflows for Excel-based data pipelines, reducing manual effort by 90%.",
+      "Built a Python/Pandas validation engine processing 10,000+ rows per run, cutting test time by 90%.",
+      "Developed cross-functional scripts adopted by 2 internal teams, eliminating redundant manual work.",
     ],
   },
   {
@@ -103,8 +93,8 @@ export const experience: Job[] = [
     role: "Cyber Security Intern",
     company: "Cisco Network, Remote",
     bullets: [
-      "Performed penetration testing across 3+ live web platforms using Burp Suite and Nmap.",
-      "Submitted three verified Bug Bounty reports through HackerOne — security-focused adversarial thinking.",
+      "Penetration-tested 3+ live web platforms with Burp Suite and Nmap, surfacing 5+ critical vulnerabilities.",
+      "Submitted 3 verified reports to PayPal's Bug Bounty Program via HackerOne.",
     ],
   },
 ];
@@ -115,12 +105,11 @@ export interface SkillGroup {
 }
 
 export const skills: SkillGroup[] = [
-  { cat: "ML & AI", items: ["PyTorch", "TensorFlow", "Keras", "scikit-learn", "HuggingFace", "LLM Fine-tuning", "RAG", "Embeddings", "Vector DBs"] },
-  { cat: "Languages", items: ["Python", "JavaScript", "TypeScript", "SQL", "C++", "CUDA", "Shell"] },
-  { cat: "MLOps", items: ["Docker", "Kubernetes", "MLflow", "Weights & Biases", "FastAPI", "CI/CD", "Azure ML", "GPU Deploy"] },
-  { cat: "Data Engineering", items: ["Pandas", "NumPy", "SQLAlchemy", "MongoDB", "SQLite", "Apache Spark", "ETL"] },
-  { cat: "CV & NLP", items: ["OpenCV", "Image Classification", "Object Detection", "ViT", "NER", "Transformers"] },
-  { cat: "Research & Comms", items: ["Paper Reading", "Experiment Design", "Technical Writing", "English (Pro)", "Hindi (Native)"] },
+  { cat: "Languages", items: ["Python", "TypeScript", "JavaScript", "Go", "SQL", "C++ (familiar)"] },
+  { cat: "Frameworks & Tools", items: ["React", "Next.js", "Express", "FastAPI", "Selenium", "Cypress", "Playwright", "Postman", "Jenkins", "Git"] },
+  { cat: "Data & Infrastructure", items: ["PostgreSQL", "SQLite", "MongoDB", "Supabase", "Docker", "Linux", "AWS EC2", "REST APIs", "WebSockets", "CI/CD"] },
+  { cat: "Domain & Systems", items: ["ISO 8583", "ISO 20022", "Double-Entry Ledger", "HSM / EMV", "JWT Auth", "Stripe Billing"] },
+  { cat: "Security", items: ["Burp Suite", "Nmap", "Wireshark", "DVWA", "Juice Shop"] },
 ];
 
 export const research = [

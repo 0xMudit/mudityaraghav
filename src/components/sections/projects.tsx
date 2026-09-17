@@ -76,7 +76,7 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full bg-zinc-900 px-3.5 py-1.5 text-[13px] font-medium text-white transition hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
           >
-            Live / Weights
+            Live
             <ArrowUpRightIcon size={14} />
           </a>
           <a
@@ -102,7 +102,7 @@ export default function Projects() {
       <SectionHeading
         index="03"
         title="Projects"
-        description="Applied work with real products behind it — not mockups."
+        description="Systems I designed, built, and operate — not mockups."
       />
 
       <div className="space-y-4">

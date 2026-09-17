@@ -8,7 +8,7 @@ export default function Highlights() {
       <SectionHeading
         index="01"
         title="Highlights"
-        description="A quick scan of what I have been shipping, publishing, and studying."
+        description="Signals across production systems, measurable impact, and published research."
       />
 
       <Reveal>
