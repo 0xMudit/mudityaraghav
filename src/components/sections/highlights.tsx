@@ -1,21 +1,37 @@
+import Reveal from "@/components/reveal";
+import { Section, SectionHeading } from "@/components/ui";
 import { highlights } from "@/data/portfolio";
 
 export default function Highlights() {
   return (
-    <section className="mb-10">
-      <h2 className="mb-4 text-2xl font-semibold tracking-tight text-[#1d1d1f] dark:text-white">Highlights</h2>
-      <ul className="list-none space-y-0 divide-y divide-[#e8e8ed] dark:divide-[#3a3a3e]">
-        {highlights.map((h) => (
-          <li key={h.date} className="flex flex-col gap-0.5 py-3 sm:flex-row sm:items-start sm:gap-4">
-            <span className="w-36 shrink-0 pt-px text-sm font-semibold text-[#1d1d1f] dark:text-white sm:w-44">
-              {h.date}
-            </span>
-            <span className="min-w-0 flex-1 text-[15px] leading-relaxed text-[#424245] dark:text-[#d2d2d7]">
-              {h.event}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <Section id="highlights">
+      <SectionHeading
+        index="01"
+        title="Highlights"
+        description="A quick scan of what I have been shipping, publishing, and studying."
+      />
+
+      <Reveal>
+        <ul className="overflow-hidden rounded-2xl border border-zinc-200/90 bg-white dark:border-white/10 dark:bg-white/[0.03]">
+          {highlights.map((item, index) => (
+            <li
+              key={item.date}
+              className={[
+                "flex flex-col gap-1 px-5 py-4 transition-colors sm:flex-row sm:items-baseline sm:gap-6",
+                "hover:bg-zinc-900/[0.02] dark:hover:bg-white/[0.03]",
+                index > 0 ? "border-t border-zinc-200/80 dark:border-white/[0.07]" : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              <span className="shrink-0 font-mono text-xs tracking-tight text-zinc-500 sm:w-44 dark:text-zinc-400">
+                {item.date}
+              </span>
+              <span className="text-[15px] text-zinc-700 dark:text-zinc-300">{item.event}</span>
+            </li>
+          ))}
+        </ul>
+      </Reveal>
+    </Section>
   );
 }
