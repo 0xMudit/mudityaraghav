@@ -1,5 +1,5 @@
 export const highlights = [
-  { date: "Now", event: "Open to software engineering roles — backend, full-stack, and infrastructure" },
+  { date: "Now", event: "Open to remote software engineering roles — backend, full-stack, and infrastructure; immediate joiner" },
   { date: "2025", event: "Shipped Clara Network — a Mastercard/Visa-style payment switch in Go with ISO 8583 authorization, double-entry ledger, and ISO 20022 settlement" },
   { date: "Mar 2025", event: "Reliance Jio — automated 80+ LLM-driven test cases (+40% coverage) and improved API stability by 25%" },
   { date: "Mar 2023", event: "Published REST-to-gRPC payment systems research (ResearchGate)" },
@@ -81,7 +81,7 @@ export interface Job {
 export const experience: Job[] = [
   {
     period: "Apr 2025 — Present",
-    role: "Software Engineer (Freelance)",
+    role: "Software Engineer (Independent)",
     company: "Personal Engineering Practice, Jabalpur",
     bullets: [
       "Designed, built, and operate three end-to-end production systems — Clara Network (payments), Malcom (AI research), and Kingswork (trading intelligence) — owning architecture, backend, deployment, and operations.",

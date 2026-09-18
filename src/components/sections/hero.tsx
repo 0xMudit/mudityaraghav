@@ -33,7 +33,7 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
               </span>
-              Open to software engineering roles
+              Open to remote software engineering roles — immediate joiner
             </span>
           </Reveal>
 
@@ -42,7 +42,7 @@ export default function Hero() {
               Muditya Raghav
             </h1>
             <p className="mt-4 font-mono text-[13px] tracking-tight text-accent-600 sm:text-sm dark:text-accent-400">
-              Software Engineer · Backend Systems &amp; Full-Stack Products
+              Software Engineer · Backend, Systems &amp; Full-Stack
             </p>
           </Reveal>
 
