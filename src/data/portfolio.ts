@@ -145,7 +145,7 @@ export const research = [
   },
 ];
 
-export const resumeUrl = "/assets/MudityaRaghav_SDE_8770428132.pdf";
+export const resumeUrl = "/assets/MudityaRaghav-Software-Engineer-Resume.pdf";
 export const email = "mudityadev@gmail.com";
 export const socials = {
   github: "https://github.com/0xMudit",
